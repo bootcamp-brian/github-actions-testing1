@@ -26,6 +26,7 @@ async function updateCodeOfConduct(repos) {
         // Uses contents of the source file to update existing file or create a new file
         if (currentCodeOfConduct) {
             const { sha } = currentCodeOfConduct.data;
+            console.log(sha);
             await octokit.request(`PUT /repos/${owner}/${name}/contents/${path}`, {
                 sha,
                 message: 'Updating code of conduct',
