@@ -7,7 +7,7 @@ const octokit = new Octokit({ auth: token });
 async function updateCodeOfConduct(repos) {
     const owner = 'bootcamp-brian';
     // Gets contents of code of conduct source file
-    const codeOfConductSource = await octokit.request(`GET /repos/${owner}/codeofconduct/contents/README.md`);
+    const codeOfConductSource = await octokit.request(`GET /repos/${owner}/github-actions-testing1/contents/README.md`);
 
     const { content } = codeOfConductSource.data;
 
@@ -29,12 +29,12 @@ async function updateCodeOfConduct(repos) {
             console.log(sha);
             await octokit.request(`PUT /repos/${owner}/${name}/contents/${path}`, {
                 sha,
-                message: 'Updating code of conduct',
+                message: 'Updating code of conduct file',
                 content
             });
         } else {
             await octokit.request(`PUT /repos/${owner}/${name}/contents/${path}`, {
-                message: 'Updating code of conduct',
+                message: 'Creating code of conduct file',
                 content
             });
         }
