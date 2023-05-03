@@ -1,8 +1,8 @@
 {
-  "name": "github-actions",
+  "name": "update-codeofconduct",
   "version": "1.0.0",
   "description": "",
-  "main": "copy-file-to-new-repo.js",
+  "main": "update-codeofconduct.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

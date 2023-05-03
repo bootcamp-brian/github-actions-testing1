@@ -1,4 +1,5 @@
 name: Update Code of Conduct
+
 on:
   push:
     paths:
@@ -19,4 +20,4 @@ jobs:
       - name: Copy code of conduct to other repos
         env:
           token: ${{ secrets.HACKFORLA_BOT_PA_TOKEN }}
-        run: node github-action/copy-file-to-new-repo.js
+        run: node github-action/update-codeofconduct.js
