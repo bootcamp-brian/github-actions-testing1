@@ -20,4 +20,4 @@ jobs:
       - name: Copy code of conduct to other repos
         env:
           token: ${{ secrets.HACKFORLA_BOT_PA_TOKEN }}
-        run: node node github-actions/update-codeofconduct/update-codeofconduct.js
+        run: node github-actions/update-codeofconduct/update-codeofconduct.js
